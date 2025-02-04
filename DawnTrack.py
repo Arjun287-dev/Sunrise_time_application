@@ -21,7 +21,7 @@ def fetch_weather_data(city_name):
     
     if response.status_code != 200:
         st.error("Invalid response from the API.")
-        return None, None
+        return None
     sunrise = data["sys"].get("sunrise")
     timezone_offset = data.get("timezone", 0)
     
@@ -44,7 +44,7 @@ if st.button("Get Sunrise Time"):
                 formatted_time = convert_utc_to_local(sunrise_time, timezone_offset)
                 st.subheader(f"Sunrise time in {city}: {formatted_time}")
             else:
-                st.error("Could not fetch sunrise time. Please ")
+                st.error("Could not fetch sunrise time. Please enter valid city name")
         else:
             st.error("Invalid city name.")
     else:
