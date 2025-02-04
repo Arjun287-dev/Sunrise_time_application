@@ -3,7 +3,7 @@ import streamlit as st
 from datetime import datetime,timezone,timedelta
 
 def get_coordinates(city_name):
-    API_KEY = "4957901b5453a46183958e9be751a3d4"
+    API_KEY = "API"
     url = f"http://api.openweathermap.org/geo/1.0/direct?q={city_name}&limit=5&appid={API_KEY}"
     response = requests.get(url)
     data = response.json()
@@ -13,7 +13,7 @@ def get_coordinates(city_name):
     return data[0]["name"]
 
 def fetch_sunrise_time(city_name):
-    API_KEY = "4957901b5453a46183958e9be751a3d4"
+    API_KEY = "API"
     url = f"https://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={API_KEY}"
     response = requests.get(url)
     data = response.json()
