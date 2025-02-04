@@ -1,4 +1,4 @@
-# Currency Converter
+# Sunrise time tracker 
 
 A simple application that shows the sunrise time of the city fetched from an API.
 
